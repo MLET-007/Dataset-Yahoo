@@ -6,9 +6,9 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_DB=datajud
-      - POSTGRES_USER=datajud
-      - POSTGRES_PASSWORD=datajud
+      - POSTGRES_DB=stock_db
+      - POSTGRES_USER=stock_user
+      - POSTGRES_PASSWORD=stock_password
       - POSTGRES_HOST=db
       - POSTGRES_PORT=5432
     networks:
@@ -28,7 +28,7 @@ services:
       - 8000:8000
     env_file:
       - .env
-    command: poetry run uvicorn yahoo-predict.app:app --host 0.0.0.0 --port 8000
+    command: poetry run uvicorn yahoo_predict.app:app --host 0.0.0.0 --port 8000
     networks:
       - docker_compose
     depends_on:
