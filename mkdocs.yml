@@ -1,0 +1,61 @@
+site_name: Docs API Dataset Ações
+nav:
+  - Home: index.md
+  - Endpoints: endpoints.md
+  - Swagger: http://localhost:8000/docs
+  - Notebook: https://colab.research.google.com/drive/1hQfHJgg6FycUskVG4yxMxts_pzJeQv7M?usp=sharing
+theme:
+  name: "material"
+  language: pt-BR
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - toc.follow
+    # Para a "table of content" da documentação do mkdocs, retire a linha de codigo abaixo
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Mudar para modo Escuro
+      primary: blue
+      accent: blue
+    - scheme: slate 
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para modo Claro   
+      primary: blue
+      accent: blue
+
+    
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.mark
+  - attr_list
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/MLET-007"  target="_blank" rel="noopener">MLET-007</a>
