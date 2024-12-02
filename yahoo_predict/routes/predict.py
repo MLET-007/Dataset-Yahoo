@@ -10,6 +10,10 @@ class PredictRequest(BaseModel):
 
 
 @router.post("/predict")
-def predict(request: PredictRequest):
-    controller = PredictController()
-    return controller.predict(request)
+def predict():
+    try:
+        controller = PredictController()
+        return controller.predict()
+    except Exception as e:
+        print(e)
+        return {"error": str(e)}
