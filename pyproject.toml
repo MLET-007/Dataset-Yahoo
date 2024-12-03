@@ -16,6 +16,9 @@ alembic = "^1.14.0"
 yfinance = "^0.2.50"
 psycopg2-binary = "^2.9.10"
 tensorflow = "^2.17.0"
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.5.47"
+markdown-toc = "^1.2.6"
 
 
 [build-system]
