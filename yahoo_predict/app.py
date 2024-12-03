@@ -1,16 +1,19 @@
 from fastapi import FastAPI
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from .routes.predict import router as predict_router
 from .routes.stock import router as stock_router
 from alembic.config import Config
 from alembic import command
 from .config import Settings
 
+
 settings = Settings()
 
 app = FastAPI()
 
+app.mount('/mkdocs', StaticFiles(directory='site', html=True), name='mkdocs')
 app.include_router(predict_router)
 app.include_router(stock_router)
 
